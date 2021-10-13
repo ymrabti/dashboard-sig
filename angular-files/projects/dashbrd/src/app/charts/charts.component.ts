@@ -19,8 +19,7 @@ export class ChartsComponent implements OnInit {
 
     ngOnInit(): void {
         let pie_sti=setInterval(() => {
-            console.log(this.bacs_prov);
-            if (this.bacs_prov !== 0) {
+            if (this.bacs_prov) {
                 clearInterval(pie_sti);
                 this.pie(this.bacs_prov);
             }

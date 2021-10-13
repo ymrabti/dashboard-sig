@@ -245,9 +245,9 @@ export class AppComponent implements OnDestroy,OnInit {
         visible: true,
         opacity: 0.7,
         source: new TileWMS({
-            url: "http://sigsrv:8080/geoserver/dashboard/wms",
+            url: "http://sigsrv:8080/geoserver/sdl/wms",
             params: {
-                "LAYERS": "communes_de_berkane",
+                "LAYERS": "communes_berkane",
                 "TRANSPARENT": "true",
                 "WIDTH": 640,
                 "HEIGHT": 480
@@ -306,7 +306,7 @@ export class AppComponent implements OnDestroy,OnInit {
             new VectorLayer({
 
             }),
-            this.cluster2(this.url_servey, 50, 'red'),
+            this.cluster2('http://ymrabti:3080'+this.url_servey, 50, 'red'),
             this.commune_selected
         ]
     } as GroupLayerOptions);

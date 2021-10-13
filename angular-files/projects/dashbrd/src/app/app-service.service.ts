@@ -9,9 +9,9 @@ export class AppServiceService {
     constructor(private http: HttpClient) { }
     rootURL = '/geojson';
     getGeoJSON(layer: string) {
-        return this.http.get(this.rootURL + '/dashboard/' + layer);
+        return this.http.get(/* this.rootURL */'http://ymrabti:3080/geojson' + '/dashboard/' + layer);
     }
     getGeoJSONFetch(layer: string) {
-        return this.http.get(this.rootURL + '/fetch/' + layer);
+        return this.http.get(/* this.rootURL */'http://ymrabti:3080/geojson' + '/fetch/' + layer);
     }
 }
