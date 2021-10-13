@@ -1,0 +1,39 @@
+<div id="courbe0">
+    <button class="btn btn-dark arrowbtnC1L" style="float:left" (click)="decrement()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <button class="btn btn-dark arrowbtnC1R" style="float:right;top: 0%;" (click)="increment()">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+    <br>
+    <div class="courbe1" id="courbe1-1" *ngIf="currentPage==1">
+        <a>Répartition des bacs par province</a>
+        <svg width="100%" viewBox="-200,-200,400,400" id="pie_chart" *ngIf="pie_prov">
+            <path *ngFor="let chart of pie_prov; let i = index" [attr.d]="chart.d" [attr.stroke]="chart.stroke" [attr.fill]="chart.fill" style="stroke-width: 0;" />
+        </svg>
+        <svg width="100%" viewBox="0,0,600,800" id="pie_chart_legend" *ngIf="pie_prov_legend">
+            <path *ngFor="let chart_prv of pie_prov_legend; let i = index" [attr.d]="chart_prv.d" [attr.stroke]="chart_prv.stroke" [attr.fill]="chart_prv.fill" style="stroke-width: 0;" />
+            <text *ngFor="let chart_txt of pie_prov_txt; let i = index" [attr.x]="chart_txt.x" [attr.y]="chart_txt.y" [attr.fill]="chart_txt.fill" style="font-size: 22;font-family: 'Times New Roman', Times, serif;" >{{chart_txt.title}}</text>
+        </svg>
+        <canvas id="pie_canv_ch" width="400" height="400" style="border:1px solid #d3d3d3;display: none;"></canvas>
+        <canvas id="pie_canv_lg" width="400" height="600" style="border:1px solid #d3d3d3;display: none;"></canvas>
+    </div>
+    <div class="courbe1" id="courbe1-2" *ngIf="currentPage==2">
+        <a>États des bacs sur la commune</a>
+        <svg width="100%" viewBox="-200,-200,400,400" id="pie_chart2">
+        </svg>
+        <svg width="100%" viewBox="0,0,400,400" id="pie_chart_legend2">
+        </svg>
+    </div>
+    <!-- <div class="courbe1" id="courbe1-3" *ngIf="currentPage==3">
+        <a>Table 3</a>
+    </div>
+    <div class="courbe1" id="courbe1-4" *ngIf="currentPage==4">
+        <a>Table 4</a>
+    </div>
+    <div class="courbe1" id="courbe1-5" *ngIf="currentPage==5">
+        <a>Table 5</a>
+    </div> -->
+</div>
+
+<!-- d="{{chart.d}}" stroke="{{chart.stroke}}" fill="{{chart.fill}}" -->

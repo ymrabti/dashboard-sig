@@ -1,0 +1,15 @@
+<app-header [message]="message"></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 mrgnbtm">
+            <app-form></app-form>
+        </div>
+        <div class="col-md-5 mrgnbtm">
+            <app-display-board (getUsersEvent)="getAllUsers()">
+            </app-display-board>
+        </div>
+    </div>
+</div>
+<div class="mrgnbtm">
+    <app-users *ngIf="users.length !== 0" [users]="users"></app-users>
+</div>

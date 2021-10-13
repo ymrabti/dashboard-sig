@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+<app-indicateurs
+[(distanceDEB)]="distanceDEB"
+[(distanceNettoi)]="distanceNettoi"
+[(distanceBalElec)]="distanceBalElec"
+[(distanceBalMeca)]="distanceBalMeca"
+
+[(distanceBSAT)]="distanceBSAT"
+[(distanceBOM)]="distanceBOM"
+[(NBR_BACS)]="NBR_BACS"
+>
+
+</app-indicateurs>
+<div class="row dark">
+    <div id="communes_berkane" class="col-md-2 division" style="color: rgb(161, 161, 161);">
+        <app-select-list *ngIf="communes.length !== 0" [communes]="communes" (commune_click)="communeClickedPrnt($event)" (setView)="SetInitView($event)"></app-select-list>
+    </div>
+    <div class="col-lg-7" id="carte">
+        <app-map></app-map>
+    </div>
+    <div class="col-md-3 leftaside">
+        <app-charts [(bacs_prov)]="bacs_prov"></app-charts>
+    </div>
+
+</div>
+
+<div id="tabs">
+    <mat-tab-group>
+        <mat-tab label="Communes">
+            <table mat-table [dataSource]="communes" class="table table-hover table-dark mat-elevation-z8">
+            
+                <!--- Note that these columns can be defined in any order.
+                                    The actual rendered columns are set as a property on the row definition" -->
+                <!--  
+                                <ng-container matColumnDef="position">
+                                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                                </ng-container>
+                    
+                                <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                </ng-container>
+                    
+                                <ng-container matColumnDef="weight">
+                                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                                </ng-container>
+                    
+                                
+                                <ng-container matColumnDef="symbol">
+                                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                                </ng-container>
+                                -->
+            
+                <ng-container [matColumnDef]="col" *ngFor="let col of displayedColumns">
+                    <th mat-header-cell *matHeaderCellDef> {{ col | uppercase }} </th>
+                    <td mat-cell *matCellDef="let element"> {{ element.properties[col] }} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </mat-tab>
+        <mat-tab label="Itineraires de collecte"> Content 2 </mat-tab>
+        <mat-tab label="Bacs de Réference"> Content 3 </mat-tab>
+        <mat-tab label="Bacs en temps réel"> Content 3 </mat-tab>
+    </mat-tab-group>
+</div>
+
+<!-- <button class="tablink">Communes</button>
+<button class="tablink">Itineraires de collecte</button>
+<button class="tablink">Bacs de Réference</button>
+<button class="tablink">Bacs en temps réel</button>
+
+<div id="Communes" class="tabcontent sticky-bottom">
+    
+</div>
+
+<div id="itineraires_collecte" class="tabcontent sticky-bottom">
+</div>
+
+<div id="bacs_reference" class="tabcontent sticky-bottom">
+</div>
+
+<div id="bacs_real_time" class="tabcontent sticky-bottom">
+</div>
+<div id="tabs" class="row">
+</div> -->
+<router-outlet></router-outlet>

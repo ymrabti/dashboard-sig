@@ -1,0 +1,12 @@
+{
+    "/geoserver/dashboard/*": {
+        "target": "http://sigsrv:8080",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/geojson/*": {
+        "target": "http://sigsrv:3080",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

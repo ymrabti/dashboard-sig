@@ -1,0 +1,47 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-bars"></i></button>
+        <div class="dropdown-content">
+            <a href="/province_berkane">Province de Berkane</a>
+            <a href="/commune_berkane">Commune de berkane</a>
+            <a href="/sdmb">SDMB</a>
+        </div>
+    </div>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Click Mez
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="navbar-brand nav-link" href="#" onclick="()=>{return false;}">
+                    Platforme Dashboard
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown dropdown-right">
+            <button class="dropbtn" title="Module d'Impression">Imprimer</button>
+            <div id="export_dropdown" class="dropdown-content">
+                <button id="export-png" name="exportpng" class="btn btn-default">Imprimer PNG</button>
+                <div class="dropdown-divider"></div>
+                <button id="export-pdf" name="exportpdf" class="btn btn-default">Imprimer PDF</button>
+            </div>
+
+        </div>
+        <select id="format" onchange="typechange()" class="form-control" data-role="select-dropdown" data-profile="minimal">
+            <option value="a0">Taille de page</option>
+            <option selected value="a0">A0 (Lente)</option>
+            <option value="a1">A1</option>
+            <option value="a2">A2</option>
+            <option value="a3">A3</option>
+            <option value="a4" selected>A4</option>
+            <option value="a5">A5 (Rapide)</option>
+        </select>
+        <select id="type" onchange="typechange()" class="form-control" data-role="select-dropdown" data-profile="minimal">
+            <option value="none">Mesurer</option>
+            <option value="length">Trajet</option>
+            <option value="area">Surface</option>
+        </select>
+    </div>
+</nav>

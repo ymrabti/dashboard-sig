@@ -1,0 +1,11 @@
+https://github.com/bbachi/angular-nodejs-example.git
+
+
+angular-nodejs-example : app.js     app.component.ts        app.component.spec.ts
+            package.json(angular)   package-lock.json(angular)      angular.json
+            karma.js                package.json(nodejs)       rootController.js
+
+
+
+my-app : app.js         gulpfile.js         rootController.js
+    

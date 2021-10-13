@@ -1,0 +1,12 @@
+.display-board {
+  width: 100%;
+  background:linear-gradient(45deg,rgb(51, 107, 124) 0%
+  ,rgb(12, 62, 77) 45%,rgb(12, 24, 77) 100%) ;
+  padding: 5%;
+}
+
+.number {
+  color: rgb(255, 221, 67);
+  font-size: 35px;
+  text-align: center;
+}

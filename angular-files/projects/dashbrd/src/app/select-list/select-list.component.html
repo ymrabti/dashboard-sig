@@ -1,0 +1,9 @@
+<div class="head-section">Communes de berkane</div>
+<!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle [ngClass]="'commune-selection link-commune'" *ngFor="let commune of communes; let i = index" (click)="communeClicked(commune)" value="{{commune.properties.commune_fr}}">{{commune.properties.commune_fr}}</mat-button-toggle>
+</mat-button-toggle-group> -->
+<div *ngFor="let commune of communes; let i = index">
+    <div class="commune-selection link-commune" [ngClass] (click)="communeClicked($event,commune)"> 
+        <b>{{commune.properties.commune_fr}}</b>
+    </div>
+</div>

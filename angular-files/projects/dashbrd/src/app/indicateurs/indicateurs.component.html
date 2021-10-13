@@ -1,0 +1,79 @@
+<nav class="row">
+    <div class="col-sm-2">
+        <div class="indicateur">
+            <a class="agenrem">Distance Nettoiement</a>
+            <div data-view="Distance" class="logo-genre">
+                <svg width="50"  height="50" viewbox="-50,-50,100,100">
+                    <line x1="-45" y1="-45" x2="45" y2="45" stroke="#987db7" stroke-width="5" />
+                </svg>
+                <br>
+                <a id="distanceNettoi" class="logoaexc" style="margin-bottom:36%;font-size: 24px;">{{distanceNettoi}} m</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="indicateur">
+            <a class="aexc">Distance BOM</a>
+            <div class="logo"><svg width="50"  height="50" viewbox="-50,-50,100,100">
+                    <line x1="-45" y1="-45" x2="45" y2="45" stroke="#eeee00" stroke-width="5" />
+                </svg>
+                <br>
+                <a id="distanceBOM" class="logoaexc" style="margin-bottom:36%;font-size: 24px;">{{distanceBOM}} m</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="indicateur">
+            <a class="aexc">Distance BSAT</a>
+            <div class="logo"><svg width="50"  height="50" viewbox="-50,-50,100,100">
+                    <line x1="-45" y1="-45" x2="45" y2="45" stroke="#eeee00" stroke-width="5" />
+                </svg>
+                <br>
+                <a id="distanceBSAT" class="logoaexc" style="margin-bottom:36%;font-size: 24px;">{{distanceBSAT}} m</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="indicateur">
+
+            <a class="adec">Distance Balayage mécanique</a>
+            <div class="logo"><svg width="50"  height="50" viewbox="-50,-50,100,100">
+                    <line x1="-45" y1="-45" x2="45" y2="45" stroke="#e77148" stroke-width="5" />
+                </svg>
+                <br>
+                <a id="distanceBalMec" class="logoam" style="margin-bottom:36%;font-size: 24px;">{{distanceBalMeca}} m</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="indicateur">
+            <a class="ague">Distance Balayage électrique</a>
+            <div class="logo"><svg width="50"  height="50" viewbox="-50,-50,100,100">
+                    <line x1="-45" y1="-45" x2="45" y2="45" stroke="#b7484b" stroke-width="5" />
+                </svg>
+                <br>
+                <a id="distanceBalElec" class="logoag" style="margin-bottom:36%;font-size: 24px;">{{distanceBalElec}} m</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2 ">
+        <div class="indicateur">
+            <a class="ague">Distance Débardeurs</a>
+            <div class="logo"><svg width="50"  height="50" viewbox="-50,-50,100,100">
+                    <line x1="-45" y1="-45" x2="45" y2="45" stroke="#b7484b" stroke-width="5" />
+                </svg>
+                <br>
+                <a id="distanceDebardeurs" class="logoag" style="margin-bottom:36%;font-size: 24px;">{{distanceDEB}} m</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="indicateur">
+            <a class="amoy">Nombre de Bacs</a><br>
+            <img src="assets/bacicon.png" (click)="showConfig()" alt="bac icon" width="50px" style="display: inline-block;">
+            <br>
+            <a id="nombre_de_bacs" class="logoaexc" style="margin-bottom:36%;font-size: 24px;">{{NBR_BACS}}</a>
+        </div>
+    </div>
+
+</nav>

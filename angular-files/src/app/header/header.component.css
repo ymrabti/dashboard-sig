@@ -1,0 +1,8 @@
+.header {
+  width: 100%;
+  padding: 2%;
+  background: linear-gradient(45deg, rgb(226, 43, 104) 0%, rgb(212, 44, 162) 20%,
+  rgb(226, 43, 43) 40%,rgb(207, 100, 0) 60%,rgb(134, 132, 3) 80%,rgb(158, 184, 13) 100%);
+  color: rgb(219, 219, 219);
+  text-align: center;
+}

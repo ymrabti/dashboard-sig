@@ -1,0 +1,18 @@
+.active_liste_select {
+    color: rgb(34, 34, 34);
+    background-color: rgb(194, 194, 194);
+}
+
+.commune-selection {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 0 15px 15px;
+    border: 1px white solid;
+}
+
+.head-section{
+    font-size: 1.2vw;
+    color: white;
+    margin: 5px;border: 2px solid;
+}
